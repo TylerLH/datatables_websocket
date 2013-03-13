@@ -1,0 +1,21 @@
+doctype 5
+html(lang="en")
+  head
+    meta(charset="utf-8")
+    title Messages
+    link(rel="stylesheet", href="//netdna.bootstrapcdn.com/bootswatch/2.3.0/cosmo/bootstrap.min.css")
+    != css('styles.css')
+
+  body(data-view="#{view}")
+    .container-fluid
+        block content
+
+    | <script>
+    | document.write('<script src=' +
+    | 'http://code.jquery.com/jquery-1.7.2.min.js' +
+    | '><\/script>')
+    | </script>
+    script(src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.1/js/bootstrap.min.js")
+    script(src="//cdnjs.cloudflare.com/ajax/libs/datatables/1.9.4/jquery.dataTables.min.js")
+    script(src='/socket.io/socket.io.js')
+    != js('scripts.js')

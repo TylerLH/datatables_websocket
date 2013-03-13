@@ -1,0 +1,19 @@
+extends layout
+
+block content
+    .page-header.clearfix
+        .pull-left
+            h3 Datatables+Websockets Demo
+        .pull-right
+            button.btn.btn-success.start Start
+            |  
+            button.btn.btn-danger.stop Stop
+            |  
+            button.btn.btn-primary.clear Clear Table
+
+    table#demo.table.table-striped.table-bordered
+        thead
+            tr
+                th Message
+                th Timestamp
+        tbody
